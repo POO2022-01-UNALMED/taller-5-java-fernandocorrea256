@@ -8,7 +8,7 @@ public class Zona {
 	//	INSTANCE VARIABLES
 	private String nombre;
 	private Zoologico zoo;
-	private ArrayList<Animal> animales;
+	private ArrayList<Animal> animales = new ArrayList<Animal>();
 	
 	
 	//	CONSTRUCTORS

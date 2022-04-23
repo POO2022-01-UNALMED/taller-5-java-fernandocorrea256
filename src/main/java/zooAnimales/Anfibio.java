@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Anfibio extends Animal{
 	
 	// CLASS VARIABLES
-	private static ArrayList<Anfibio> listado;
+	private static ArrayList<Anfibio> listado = new ArrayList<Anfibio>();
 	public static int ranas;
 	public static int salamandras;
 	
