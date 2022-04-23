@@ -51,4 +51,12 @@ public class Anfibio extends Animal{
 	public String desplazarse() {
 		return "saltar";
 	}
+	
+	// SETTERS
+	public void setColorPiel(String colorPiel) { this.colorPiel = colorPiel; }
+	public void setVenenoso(boolean venenoso) {this.venenoso = venenoso; }
+	
+	// GETTERS
+	public String getColorPiel() { return this.colorPiel; }
+	public boolean getVenenoso() { return this.venenoso; }
 }

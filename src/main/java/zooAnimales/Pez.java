@@ -52,4 +52,12 @@ public class Pez extends Animal{
 	public String desplazarse() {
 		return "nadar";
 	}
+
+	// SETTERS
+	public void setColorEscamas(String colorEscamas) { this.colorEscamas = colorEscamas; }
+	public void setCantidadAletas(int cantidadAletas) { this.cantidadAletas = cantidadAletas; }
+	
+	// GETTERS
+	public String getColorEscamas() { return this.colorEscamas; }
+	public int getCantidadAletas() { return this.cantidadAletas; }
 }

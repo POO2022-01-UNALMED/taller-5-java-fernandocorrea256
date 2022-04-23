@@ -52,4 +52,12 @@ public class Reptil extends Animal{
 	public String desplazarse() {
 		return "reptar";
 	}
+	
+	// SETTERS
+	public void setColorEscamas(String colorEscamas) { this.colorEscamas = colorEscamas; }
+	public void setLargoCola(int largoCola) { this.largoCola = largoCola; }
+	
+	// GETTERS
+	public String getColorEscamas() { return this.colorEscamas; }
+	public int getLargoCola() { return this.largoCola; }
 }

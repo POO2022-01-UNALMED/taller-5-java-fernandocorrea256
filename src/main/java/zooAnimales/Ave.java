@@ -49,4 +49,10 @@ public class Ave extends Animal{
 	public String desplazarse() {
 		return "volar";
 	}
+	
+	// SETTERS
+	public void setColorPlumas(String color) { this.colorPlumas = color; }
+	
+	// GETTERS
+	public String getColorPlumas() { return this.colorPlumas; }
 }

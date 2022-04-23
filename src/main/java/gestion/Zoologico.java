@@ -14,6 +14,11 @@ public class Zoologico {
 		
 	}
 	
+	public Zoologico(String nombre, String ubicacion) {
+		this.nombre = nombre;
+		this.ubicacion = ubicacion;
+	}
+	
 	public Zoologico(String nombre, String ubicacion, Zona[] zonas) {
 		this.nombre = nombre;
 		this.ubicacion = ubicacion;
@@ -38,5 +43,15 @@ public class Zoologico {
 		new_arr[this.zonas.length] = zona;
 		this.zonas = new_arr;
 	}
+	
+	// SETTERS
+	public void setNombre(String nombre) { this.nombre = nombre; }
+	public void setUbicacion(String ubicacion) { this.ubicacion = ubicacion; }
+	public void setZonas(Zona[] zonas) { this.zonas = zonas; }
+	
+	// GETTERS
+	public String getNombre() { return this.nombre; }
+	public String getUbicacion() { return this.ubicacion; }
+	public Zona[] getZonas() { return this.zonas; }
 	
 }

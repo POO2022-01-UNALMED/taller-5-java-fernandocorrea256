@@ -6,7 +6,7 @@ public class Zona {
 	
 	//	INSTANCE VARIABLES
 	private String nombre;
-	private Zoologico[] zoo;
+	private Zoologico zoo;
 	private Animal[] animales;
 	
 	
@@ -15,7 +15,12 @@ public class Zona {
 		
 	}
 	
-	public Zona(String nombre, Zoologico[] zoo, Animal[] animales) {
+	public Zona(String nombre, Zoologico zoo) {
+		this.nombre = nombre;
+		this.zoo = zoo;
+	}
+	
+	public Zona(String nombre, Zoologico zoo, Animal[] animales) {
 		this.nombre = nombre;
 		this.zoo = zoo;
 		this.animales = animales;
@@ -38,9 +43,12 @@ public class Zona {
 
 
 	// SETTERS
+	public void setNombre(String nombre) { this.nombre = nombre; }
+	public void setZoo(Zoologico zoo) { this.zoo = zoo; }
+	public void setAnimales(Animal[] animales) {this.animales = animales; }
 	
 	// GETTERS
-	public String getNombre() {
-		return this.nombre;
-	}
+	public String getNombre() { return this.nombre; }
+	public Zoologico getZoo() { return this.zoo; }
+	public Animal[] getAnimales() { return this.animales; }
 }

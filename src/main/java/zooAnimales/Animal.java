@@ -60,4 +60,22 @@ public class Animal {
 					" y mi genero es " + this.genero;
 		}
 	}
+
+	// SETTERS
+	public void setNombre(String nombre) { this.nombre = nombre; }
+	public void setEdad(int edad) { this.edad = edad; }
+	public void setHabitat(String habitat) { this.habitat = habitat; }
+	public void setGenero(String genero) { this.genero = genero; }
+	public void setZona(Zona zona) { this.zona = zona; }
+	
+	public void setTotalAnimales(int total) { totalAnimales = total; } 
+	
+	// GETTERS
+	public String getNombre() { return this.nombre; }
+	public int getEdad() { return this.edad; }
+	public String getHabitat() { return this.habitat; }
+	public String getGenero() { return this.genero; }
+	public Zona getZona() { return this.zona; }
+	
+	public int getTotalAnimales() { return totalAnimales; }
 }
