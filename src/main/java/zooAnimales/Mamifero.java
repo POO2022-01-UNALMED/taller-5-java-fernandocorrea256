@@ -1,5 +1,7 @@
 package zooAnimales;
 
+import gestion.Zona;
+
 public class Mamifero extends Animal{
 	
 //	CLASS VARIABLES
@@ -46,6 +48,6 @@ public class Mamifero extends Animal{
 	
 	public static Mamifero crearLeon(String nombre, int edad, String genero) {
 		leones++;
-		return new Mamimfero(nombre, edad, "selva", genero, null, true, 4);
+		return new Mamifero(nombre, edad, "selva", genero, null, true, 4);
 	}
 }

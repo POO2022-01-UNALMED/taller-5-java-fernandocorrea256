@@ -1,5 +1,7 @@
 package zooAnimales;
 
+import gestion.Zona;
+
 public class Pez extends Animal{
 
 	// CLASS VARIABLES
@@ -13,7 +15,9 @@ public class Pez extends Animal{
 
 
 	// CONSTRUCTORS
-	public Pez() { this("", 0, "Agua", "F", null, "", 2); }
+	public Pez() { 
+		this("", 0, "Agua", "F", null, "", 2); 
+	}
 	
 	public Pez(String nombre, int edad, String habitat, String genero, Zona zona, String colorEscamas, int cantidadAletas) {
 		super(nombre, edad, habitat, genero, zona);
@@ -23,7 +27,7 @@ public class Pez extends Animal{
 		// UPDATE listado[]
 		Pez new_listado[] = new Pez[listado.length + 1];
 		for (int i = 0; i < listado.length; i++) {
-			new_listado = listado[i];
+			new_listado[i] = listado[i];
 		}
 		new_listado[listado.length] = this;
 		listado = new_listado;

@@ -1,11 +1,13 @@
 package zooAnimales;
 
+import gestion.Zona;
+
 public class Anfibio extends Animal{
 	
 	// CLASS VARIABLES
 	private static Anfibio[] listado;
 	public static int ranas;
-	public static int salmandras;
+	public static int salamandras;
 	
 	// INSTANCE VARIABLES
 	private String colorPiel;
@@ -23,7 +25,7 @@ public class Anfibio extends Animal{
 		this.venenoso = venenoso;
 	
 		// UPDATE listado[]
-		Anfibio new_listado = new Anfibio[listado.length + 1];
+		Anfibio new_listado[] = new Anfibio[listado.length + 1];
 		for (int i = 0; i < listado.length; i++) {
 			new_listado[i] = listado[i];
 		}

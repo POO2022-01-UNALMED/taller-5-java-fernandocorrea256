@@ -1,5 +1,7 @@
 package zooAnimales;
 
+import gestion.Zona;
+
 public class Reptil extends Animal{
 	
 	// CLASS VARIABLES
