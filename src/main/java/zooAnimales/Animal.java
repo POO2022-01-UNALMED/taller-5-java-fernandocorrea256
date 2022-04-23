@@ -37,11 +37,11 @@ public class Animal {
 	}
 	
 	// CLASS METHODS
-	public static void totalPorTipo() {
-		System.out.println("Mamiferos :" + Mamifero.cantidadMamiferos());
-		System.out.println("Aves :" + Ave.cantidadAves());
-		System.out.println("Reptiles :" + Reptil.cantidadReptiles());
-		System.out.println("Anfibios :"+ Anfibio.cantidadAnfibios());
+	public static String totalPorTipo() {
+		return "Mamiferos :" + Mamifero.cantidadMamiferos() + "\n" + 
+		"Aves :" + Ave.cantidadAves() + "\n" + 
+		"Reptiles :" + Reptil.cantidadReptiles() + "\n" + 
+		"Anfibios :"+ Anfibio.cantidadAnfibios();
 	}
 	
 	
