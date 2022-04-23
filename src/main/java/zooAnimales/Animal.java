@@ -61,6 +61,10 @@ public class Animal {
 		}
 	}
 
+	public String movimiento() {
+		return "desplazarse";
+	}
+	
 	// SETTERS
 	public void setNombre(String nombre) { this.nombre = nombre; }
 	public void setEdad(int edad) { this.edad = edad; }

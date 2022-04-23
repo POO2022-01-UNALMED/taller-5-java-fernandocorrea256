@@ -17,6 +17,10 @@ public class Ave extends Animal{
 		this("", 0, "", "", null, "");
 	}
 	
+	public Ave(String nombre, int edad, String habitat, String genero, String colorPlumas) {
+		this(nombre, edad, habitat, genero, null, colorPlumas);
+	}
+	
 	public Ave(String nombre, int edad, String habitat, String genero, Zona zona, String colorPlumas) {
 		super(nombre, edad, habitat, genero, zona);
 		this.colorPlumas = colorPlumas;
@@ -46,7 +50,7 @@ public class Ave extends Animal{
 	}
 	
 	// INSTANCE METHODS
-	public String desplazarse() {
+	public String movimiento() {
 		return "volar";
 	}
 	

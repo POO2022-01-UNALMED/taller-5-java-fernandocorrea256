@@ -18,6 +18,9 @@ public class Reptil extends Animal{
 		this("", 0, "humedal", "M", null, "", 0);
 	}
 	
+	public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas, int largoCola) {
+		this(nombre, edad, habitat, genero, null, colorEscamas, largoCola);
+	}
 	
 	public Reptil(String nombre, int edad, String habitat, String genero, Zona zona, String colorEscamas, int largoCola) {
 		super(nombre, edad, habitat, genero, zona);
@@ -49,7 +52,7 @@ public class Reptil extends Animal{
 	}
 	
 	// INSTANCE METHODS
-	public String desplazarse() {
+	public String movimiento() {
 		return "reptar";
 	}
 	

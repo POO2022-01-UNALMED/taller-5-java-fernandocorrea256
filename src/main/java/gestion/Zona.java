@@ -32,7 +32,7 @@ public class Zona {
 		return this.animales.length;
 	}
 	
-	public void agregarAnimal(Animal animal) {
+	public void agregarAnimales(Animal animal) {
 		Animal new_arr[] = new Animal[animales.length + 1];
 		for (int i = 0; i < this.animales.length; i++) {
 			new_arr[i] = this.animales[i];

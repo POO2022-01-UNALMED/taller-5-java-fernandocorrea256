@@ -19,6 +19,10 @@ public class Anfibio extends Animal{
 		this("", 0, "", "", null, "", true);
 	}
 	
+	public Anfibio(String nombre, int edad, String habitat, String genero, String colorPiel, boolean venenoso) {
+		this(nombre, edad, habitat, genero, null, colorPiel, venenoso);
+	}
+	
 	public Anfibio(String nombre, int edad, String habitat, String genero, Zona zona, String colorPiel, boolean venenoso) {
 		super(nombre, edad, habitat, genero, zona);
 		this.colorPiel = colorPiel;
@@ -48,7 +52,7 @@ public class Anfibio extends Animal{
 	}
 	
 	// INSTANCE METHODS
-	public String desplazarse() {
+	public String movimiento() {
 		return "saltar";
 	}
 	
@@ -58,5 +62,5 @@ public class Anfibio extends Animal{
 	
 	// GETTERS
 	public String getColorPiel() { return this.colorPiel; }
-	public boolean getVenenoso() { return this.venenoso; }
+	public boolean isVenenoso() { return this.venenoso; }
 }

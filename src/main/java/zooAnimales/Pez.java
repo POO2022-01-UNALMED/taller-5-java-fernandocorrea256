@@ -19,6 +19,10 @@ public class Pez extends Animal{
 		this("", 0, "Agua", "F", null, "", 2); 
 	}
 	
+	public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas) {
+		this(nombre, edad, habitat, genero, null, colorEscamas, cantidadAletas);
+	}
+	
 	public Pez(String nombre, int edad, String habitat, String genero, Zona zona, String colorEscamas, int cantidadAletas) {
 		super(nombre, edad, habitat, genero, zona);
 		this.colorEscamas = colorEscamas;
@@ -49,7 +53,7 @@ public class Pez extends Animal{
 	}
 	
 	// INSTANCE METHODS
-	public String desplazarse() {
+	public String movimiento() {
 		return "nadar";
 	}
 
