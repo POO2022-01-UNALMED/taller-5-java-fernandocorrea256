@@ -25,7 +25,7 @@ public class Anfibio extends Animal{
 		// UPDATE listado[]
 		Anfibio new_listado = new Anfibio[listado.length + 1];
 		for (int i = 0; i < listado.length; i++) {
-			new_listado[i] = listado[i]
+			new_listado[i] = listado[i];
 		}
 		new_listado[listado.length] = this;
 	}
