@@ -1,13 +1,14 @@
 package gestion;
 
 import zooAnimales.Animal;
+import java.util.ArrayList;
 
 public class Zona {
 	
 	//	INSTANCE VARIABLES
 	private String nombre;
 	private Zoologico zoo;
-	private Animal[] animales;
+	private ArrayList<Animal> animales;
 	
 	
 	//	CONSTRUCTORS
@@ -20,7 +21,7 @@ public class Zona {
 		this.zoo = zoo;
 	}
 	
-	public Zona(String nombre, Zoologico zoo, Animal[] animales) {
+	public Zona(String nombre, Zoologico zoo, ArrayList<Animal> animales) {
 		this.nombre = nombre;
 		this.zoo = zoo;
 		this.animales = animales;
@@ -29,26 +30,21 @@ public class Zona {
 	
 	// INSTANCE METHOS
 	public int cantidadAnimales() {
-		return this.animales.length;
+		return this.animales.size();
 	}
 	
 	public void agregarAnimales(Animal animal) {
-		Animal new_arr[] = new Animal[animales.length + 1];
-		for (int i = 0; i < this.animales.length; i++) {
-			new_arr[i] = this.animales[i];
-		}
-		new_arr[this.animales.length] = animal;
-		this.animales = new_arr;
+		this.animales.add(animal);
 	}
 
 
 	// SETTERS
 	public void setNombre(String nombre) { this.nombre = nombre; }
 	public void setZoo(Zoologico zoo) { this.zoo = zoo; }
-	public void setAnimales(Animal[] animales) {this.animales = animales; }
+	public void setAnimales(ArrayList<Animal> animales) {this.animales = animales; }
 	
 	// GETTERS
 	public String getNombre() { return this.nombre; }
 	public Zoologico getZoo() { return this.zoo; }
-	public Animal[] getAnimales() { return this.animales; }
+	public ArrayList<Animal> getAnimales() { return this.animales; }
 }

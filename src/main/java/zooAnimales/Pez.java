@@ -1,11 +1,12 @@
 package zooAnimales;
 
 import gestion.Zona;
+import java.util.ArrayList;
 
 public class Pez extends Animal{
 
 	// CLASS VARIABLES
-	private static Pez[] listado;
+	private static ArrayList<Pez> listado;
 	public static int salmones;
 	public static int bacalaos;
 	
@@ -28,18 +29,12 @@ public class Pez extends Animal{
 		this.colorEscamas = colorEscamas;
 		this.cantidadAletas = cantidadAletas;
 		
-		// UPDATE listado[]
-		Pez new_listado[] = new Pez[listado.length + 1];
-		for (int i = 0; i < listado.length; i++) {
-			new_listado[i] = listado[i];
-		}
-		new_listado[listado.length] = this;
-		listado = new_listado;
+		listado.add(this);
 	}
 	
 	// CLASS METHODS
 	public static int cantidadPeces() {
-		return listado.length;
+		return listado.size();
 	}
 	
 	public static Pez crearSalmon(String nombre, int edad, String genero) {

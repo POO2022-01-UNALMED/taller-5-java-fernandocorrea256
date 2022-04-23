@@ -1,13 +1,13 @@
 package gestion;
 
+import java.util.ArrayList;
+
 public class Zoologico {
 
 	//	Instance variables
 	private String nombre;
 	private String ubicacion;
-	private Zona[] zonas;
-
-	
+	private ArrayList<Zona> zonas;
 
 	//	Constructors
 	public Zoologico() {
@@ -19,7 +19,7 @@ public class Zoologico {
 		this.ubicacion = ubicacion;
 	}
 	
-	public Zoologico(String nombre, String ubicacion, Zona[] zonas) {
+	public Zoologico(String nombre, String ubicacion, ArrayList<Zona> zonas) {
 		this.nombre = nombre;
 		this.ubicacion = ubicacion;
 		this.zonas = zonas;
@@ -36,22 +36,17 @@ public class Zoologico {
 	}
 	
 	public void agregarZonas(Zona zona) {
-		Zona new_arr[] = new Zona[this.zonas.length+1];
-		for (int i = 0; i < this.zonas.length; i++) {
-			new_arr[i] = this.zonas[i];
-		}
-		new_arr[this.zonas.length] = zona;
-		this.zonas = new_arr;
+		this.zonas.add(zona);
 	}
 	
 	// SETTERS
 	public void setNombre(String nombre) { this.nombre = nombre; }
 	public void setUbicacion(String ubicacion) { this.ubicacion = ubicacion; }
-	public void setZonas(Zona[] zonas) { this.zonas = zonas; }
+	public void setZonas(ArrayList<Zona> zonas) { this.zonas = zonas; }
 	
 	// GETTERS
 	public String getNombre() { return this.nombre; }
 	public String getUbicacion() { return this.ubicacion; }
-	public Zona[] getZonas() { return this.zonas; }
+	public ArrayList<Zona> getZonas() { return this.zonas; }
 	
 }

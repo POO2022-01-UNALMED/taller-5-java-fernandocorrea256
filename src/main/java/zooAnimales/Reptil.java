@@ -1,11 +1,12 @@
 package zooAnimales;
 
 import gestion.Zona;
+import java.util.ArrayList;
 
 public class Reptil extends Animal{
 	
 	// CLASS VARIABLES
-	private static Reptil[] listado;
+	private static ArrayList<Reptil> listado;
 	public static int iguanas;
 	public static int serpientes;
 	
@@ -27,18 +28,12 @@ public class Reptil extends Animal{
 		this.colorEscamas = colorEscamas;
 		this.largoCola = largoCola;
 		
-		// UPDATE listado
-		Reptil new_listado[] = new Reptil[listado.length + 1];
-		for (int i = 0; i < listado.length; i++) {
-			new_listado[i] = listado[i];
-		}
-		new_listado[listado.length] = this;
-		listado = new_listado;
+		listado.add(this);
 	}
 	
 	// CLASS METHODS
 	public static int cantidadReptiles() {
-		return listado.length;
+		return listado.size();
 	}
 
 	public static Reptil crearIguana(String nombre, int edad, String genero) {

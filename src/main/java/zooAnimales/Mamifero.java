@@ -1,11 +1,12 @@
 package zooAnimales;
 
 import gestion.Zona;
+import java.util.ArrayList;
 
 public class Mamifero extends Animal{
 	
 //	CLASS VARIABLES
-	private static Mamifero[] listado;
+	private static ArrayList<Mamifero> listado;
 	public static int caballos;
 	public static int leones;
 	
@@ -28,19 +29,13 @@ public class Mamifero extends Animal{
 		this.pelaje = pelaje;
 		this.patas = patas;
 		
-		// UPDATE listado[]
-		Mamifero new_arr[] = new Mamifero[listado.length + 1];
-		for (int i = 0; i < listado.length; i++) {
-			new_arr[i] = listado[i];
-		}
-		new_arr[listado.length] = this;
-		listado = new_arr;
+		listado.add(this);
 	}
 	
 	
 //	CLASS METHODS
 	public static int cantidadMamiferos() {
-		return listado.length;
+		return listado.size();
 	}
 	
 	

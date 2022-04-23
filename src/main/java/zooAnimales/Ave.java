@@ -1,11 +1,12 @@
 package zooAnimales;
 
 import gestion.Zona;
+import java.util.ArrayList;
 
 public class Ave extends Animal{
 	
 	// CLASS VARIABLES
-	private static Ave[] listado;
+	private static ArrayList<Ave> listado;
 	public static int halcones;
 	public static int aguilas;
 	
@@ -25,18 +26,12 @@ public class Ave extends Animal{
 		super(nombre, edad, habitat, genero, zona);
 		this.colorPlumas = colorPlumas;
 		
-		// UPDATE listado
-		Ave new_listado[] = new Ave[listado.length + 1];
-		for (int i = 0; i < listado.length; i++) {
-			new_listado[i] = listado[i];
-		}
-		new_listado[listado.length] = this;
-		listado = new_listado;
+		listado.add(this);
 	}
 
 	// CLASS METHODS
 	public static int cantidadAves() {
-		return listado.length;
+		return listado.size();
 	}
 	
 	public static Ave crearHalcon(String nombre, int edad, String genero) {
